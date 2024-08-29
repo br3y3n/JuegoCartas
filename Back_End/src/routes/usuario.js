@@ -1,16 +1,17 @@
 import { Router } from "express";
-import { createUsuario, deleteUsuario, getAllUsuarios, getUsuarioById, updateUsuario } from "../controller/usuario.js";
-import { loginUsuario } from "../controller/inicioSession.js";
+//import { createUsuario, deleteUsuario, getAllUsuarios, getUsuarioById, updateUsuario } from "../controller/usuario.js";
 import { checkJwt } from "../middleware/session.js";
+import { createUsuario, deleteUsuario, getAllUsuarios, getUsuarioById, updateUsuario } from "../controllers/usuario.js";
+import { loginUsuario } from "../controllers/inicioSession.js";
 
-const router = Router()
+const routerUsuario = Router()
 
 
-router.post('/', createUsuario)
-router.post('/login', loginUsuario)
-router.post('/validacion', getAllUsuarios)
-router.get('/session', checkJwt,getUsuarioById)
-router.put('/:id', updateUsuario)
-router.delete('/:id', deleteUsuario)
+routerUsuario.post('/', createUsuario)
+routerUsuario.post('/login', loginUsuario)
+routerUsuario.post('/validacion', getAllUsuarios)
+routerUsuario.get('/session', checkJwt,getUsuarioById)
+routerUsuario.put('/:id', updateUsuario)
+routerUsuario.delete('/:id', deleteUsuario)
 
-export default router
+export default routerUsuario

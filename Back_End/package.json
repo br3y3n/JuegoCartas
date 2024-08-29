@@ -2,9 +2,10 @@
   "name": "back_end",
   "version": "1.0.0",
   "description": "Back Juego Cartas ",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "",
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brayan Delgado",

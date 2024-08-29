@@ -1,10 +1,10 @@
-import { config } from 'dotenv';
+
 import jwt from 'jsonwebtoken';
 const { sign , verify} = jwt;
-config({ path: '.env' });
 
 
-const JWT_SECRET = process.env.JWT_SECRET
+
+const JWT_SECRET = process.env.JWT_SECRET ||'jwtjuego'
 
 console.log("JWT"+JWT_SECRET)
 export const generarToken =(id)=>{
