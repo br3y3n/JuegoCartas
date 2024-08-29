@@ -2,6 +2,7 @@
 import usuarioModel from "../models/usuario.js";
 import { encrypt } from "../utils/bcrypt.handle.js";
 import { generarToken } from "../utils/jwt.handle.js";
+
 export const createUsuario = async (req, res) => {
 
     try {

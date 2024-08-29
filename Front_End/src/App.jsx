@@ -1,11 +1,12 @@
-import { LoginRegister } from "./Pages/LoginRegister"
+
+import Router from "./routes/Routes"
 
 
 function App() {
 
   return (
     <>
-    <LoginRegister/>
+    <Router/>
     </>
   )
 }

@@ -36,7 +36,17 @@ export const getPresalaById = async (req, res) => {
         res.status(500).json({ message: error.message });
       }
 }
-
+export const joinToPresala = async (code) => {
+    try {
+        const presala = await presalaModel.findOne({codigo: code})
+        if (!presala) {
+            res.status(404).json({ message: 'Presala not found' })
+        }
+        presala.usuario.push()
+    } catch (error) {
+        res.status(400).json({ messageError: error})
+    }
+}
 export const updatePresala = async (req, res) => {
     try {
         const presala = await presalaModel.findByIdAndDelete(req.params.id);

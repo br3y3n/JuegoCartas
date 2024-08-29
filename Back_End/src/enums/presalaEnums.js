@@ -1,6 +1,7 @@
 export const estadoPresala = Object.freeze({
     ENESPERA: 'En espera',
-    INICIO: 'Inicio'
+    INICIO: 'Inicio',
+    FIN: 'Fin'
 })
 
 export const tipoPresala = Object.freeze({
