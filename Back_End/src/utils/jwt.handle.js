@@ -1,5 +1,5 @@
 
-import jwt from 'jsonwebtoken';
+import jwt, { decode } from 'jsonwebtoken';
 const { sign , verify} = jwt;
 
 
@@ -24,5 +24,14 @@ export const verificarToken=(jwt)=>{
         return jwtValidado
     } catch (error) {
           return error.message;
+    }
+}
+
+export const decodeToken = (token) => {
+    try {
+        const jwt = decode(token)
+        return jwt
+    } catch (error) {
+        return error.message
     }
 }
