@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const Login = ({handleToggle}) => {
     return (
@@ -15,7 +16,7 @@ export const Login = ({handleToggle}) => {
           <input type="email" placeholder="Correo electrónico" className='border p-2 rounded-sm border-violet-700 drop-shadow-md' />
           <label className='font-bold text-xl mt-5 drop-shadow-md'>Contraseña</label>
           <input type="password" placeholder="Contraseña" className='border p-2 rounded-sm border-violet-700 drop-shadow-md' />
-          <button className='bg-purple-950 mt-10 p-2 rounded-lg text-white font-semibold text-2xl'>Iniciar sesion</button>
+          <button className='bg-purple-950 mt-10 p-2 rounded-lg text-white font-semibold text-2xl'><Link to={'/crearPartida'}>Iniciar sesion</Link></button>
           <label className='text-slate-500 font-medium mt-4 text-xl cursor-pointer' onClick={handleToggle}>Registrarse</label>
         </motion.div>
       );
