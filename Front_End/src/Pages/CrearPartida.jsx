@@ -52,6 +52,7 @@ export const CrearPartida = () => {
     
       const crearPartida = (data) => {
         socket.emit('crearPartida', { ...data, creador: socket.id });
+        navigate('/presala/1')
       };
 
       const HandleModal =()=>{
